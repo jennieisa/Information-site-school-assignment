@@ -1,0 +1,143 @@
+body { //Bodyn
+  margin: -22px 0px 0px 0px;
+
+  .site-wrapper { //Wrappar hela sidan
+    background-image: url("https://images.unsplash.com/photo-1579546928937-641f7ac9bced?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=339&q=80");
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.8;
+
+    header { //Boxen med h1:an
+      padding: 5px;
+
+      h1 {
+        font-family: Bitter, 'Times New Roman', serif;
+        font-size: 35px;
+        text-align: center;
+        margin-top: 50px;
+      }
+    }
+
+    main { //Är hela sidan förutom headern
+
+      .accessibility-info { //Boxen med informationen under h1:an
+        padding: 0px 10px 20px 10px;
+      }
+
+      h2 { //Alla h2:or på sidan
+        font-family: Bitter, 'Times New Roman', serif;
+        font-size: 20px;
+        text-align: center;
+        
+        @media (min-width: 768px) { //Vid större skärm-storlek (desktop) 
+          font-size: 22px;
+        }
+      }
+
+      p, ul, a{ //Alla p, l och a taggar 
+        font-family: montserrat, arial, sans-serif;
+        font-size: 12px;
+        text-align: center;
+        
+        @media (min-width: 768px) { //Vid större skärm-storlek (desktop)
+          font-size: 15px;
+        }
+      }
+      
+      hr { //Hr taggarna
+        width: 90%;
+      }
+
+      .different-accessibilities { //Boxen med alla bilder/ikoner och text samt rubrik och hr-tagg
+        background-color: white;
+        opacity: 0.7;
+        display: flex;
+        flex-direction: column;
+      
+        .box-w-img-and-info { //Box med allt förutom rubrik och hr-tagg 
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 100%;
+
+          @media (min-width: 768px) { //Vid större skärm-storlek (desktop)
+            justify-content: space-evenly;
+          }
+
+          .img-and-info { //Alla enskilda boxar inuti med sin bild/ikon och text
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+
+            @media (min-width: 768px) { //Vid större skärm-storlek (desktop)
+              width: 40%;
+            }
+
+            .img-box { //Box med bilden/ikon
+              width: 70px;
+              height: 70px;
+              background-color: lightgray;
+              border-radius: 100px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-shadow: 1px 1px black;
+            } 
+          }
+
+          .img-and-info:hover { //Sker när vi har datormusen över
+            background-color: lightgray;
+            box-shadow: 1px 1px gray;
+            .img-box {
+              background-color: hotpink;
+            }
+          }          
+        }
+      }
+
+      .box-w-info-frontend { //Box med allt som gäller vad vi frontend-utveckalre kan göra
+        background-color: white;
+        opacity: 0.7;
+
+        h2 { //h2 taggen 
+          padding: 10px;
+        }
+
+        ul { //Osorterade listan
+          padding-bottom: 10px;
+          text-align: left;
+
+          @media (min-width: 768px) { //Vid större skärm-storlek (desktop)
+            text-align: center;
+          }
+        }
+      }
+
+      .box-w-links { //Boxen med allt som hör till länkarna
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        opacity: 0.7;
+
+        .links { //Boxen med endast länkarna
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 10px;
+
+          a { //a-taggarna (länkarna)
+            margin: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
